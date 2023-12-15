@@ -1,15 +1,15 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "A Sanctuary of Comfort and Style",
+  "text": "Each guest room at the World Palace Hotel is a masterpiece of design, meticulously crafted to provide a haven of comfort and tranquility. Plush fabrics, custom furnishings, and thoughtful amenities create an environment of refined luxury. From the expansive windows framing breathtaking city views to the spa-like bathrooms with indulgent bath products, every element is designed to pamper and rejuvenate. ",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "title": "Plush Bedding and Amenities",
+      "content": "Sink into the luxurious comfort of our king-size beds featuring plush mattresses, soft linens, and hypoallergenic pillows.",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "Soundproofed Rooms",
+      "content": "Immerse yourself in tranquility. Each room is meticulously soundproofed, ensuring a peaceful and undisturbed rest away from the city's vibrant energy. Unwind and recharge in the haven of your private oasis.",
       "icon": "notes.svg"
     }
   ]

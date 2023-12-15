@@ -3,7 +3,9 @@ import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../../common/SvgIcon";
 import { Button } from "../../../common/Button";
 import { ContentBlockProps } from "../types";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
+import Slideshow from "./index2";
+
 import {
   RightBlockContainer,
   Content,
