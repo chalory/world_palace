@@ -1,0 +1,23 @@
+.slideshow {
+    position: absolute;
+    height: auto;
+    z-index: 1;
+  }
+  
+  .item {
+    overflow: hidden;
+    position: absolute;
+    height: auto;
+  }
+  
+  .item img {
+    width: auto;
+    height: auto;   
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%) scale(1.4);
+    opacity: .4;
+    filter: blur(50px) saturate(3);
+  }
+  /* ... rest of the CSS ... */

@@ -23,6 +23,32 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
       </Zoom>
     );
   };
+  const handleSubmitEmail = async (e: React.FormEvent) => {
+    e.preventDefault();
+  
+    const { name, email, message } = values;
+    const { REACT_APP_BASE_URL } = process.env; // 
+    const url = `${REACT_APP_BASE_URL}`;
+  
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        
+        body: JSON.stringify({ name, email, message }),
+      });
+  
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+  
+      // handle response here
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
 
   return (
     <ContactContainer id={id}>
@@ -65,8 +91,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <ValidationType type="message" />
               </Col>
               <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
-              </ButtonContainer>
+              <Button onClick={handleSubmitEmail} name="submit">{t("Submit")}</Button>              </ButtonContainer>
             </FormGroup>
           </Slide>
         </Col>

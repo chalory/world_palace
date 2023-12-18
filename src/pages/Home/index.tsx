@@ -22,34 +22,42 @@ const Home = () => {
         content={IntroContent.text}
         button={IntroContent.button}
         icon="developer3.png"
+    
         id="intro"
       />
+      
+      
       <MiddleBlock
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
       />
       <ContentBlock
-        type="left"
+        type="slideshow2"
         title={AboutContent.title}
         content={AboutContent.text}
         section={AboutContent.section}
         icon="graphs.png"
         id="about"
-      />
+        images={["https://ateressi.sirv.com/IMG_20230421_173711.jpg", "https://ateressi.sirv.com/IMG_20230421_174539.jpg", "https://ateressi.sirv.com/DSC_0775.jpg"]}
+        />
       <ContentBlock
-        type="right"
+        type="slideshow"
         title={MissionContent.title}
         content={MissionContent.text}
         icon="waving.png"
         id="mission"
+        images={["https://ateressi.sirv.com/IMG_20230421_173711.jpg", "https://ateressi.sirv.com/IMG_20230421_174539.jpg", "https://ateressi.sirv.com/DSC_0775.jpg"]}
+
       />
       <ContentBlock
-        type="left"
+        type="slideshow2"
         title={ProductContent.title}
         content={ProductContent.text}
         icon="family.png"
         id="product"
+        images={["https://ateressi.sirv.com/IMG_20230421_173711.jpg", "https://ateressi.sirv.com/IMG_20230421_174539.jpg", "https://ateressi.sirv.com/DSC_0775.jpg"]}
+
       />
       <Contact
         title={ContactContent.title}

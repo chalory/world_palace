@@ -8,7 +8,8 @@ export interface ButtonProps {
   fixedWidth?: boolean;
   name?: string;
   children: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+
 }
 
 export interface SvgIconProps {
