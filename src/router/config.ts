@@ -4,6 +4,8 @@ const routes = [
     exact: true,
     component: "Home",
   },
+  
+  
 ];
 
 export default routes;

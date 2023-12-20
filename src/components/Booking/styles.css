@@ -1,0 +1,47 @@
+/* .displayimg {
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+}
+
+.header {
+    position: absolute;
+    top: 40%;
+    left: 37%;
+    color: white;
+    font-size: 70px;
+} */
+
+.ktvrooms {
+    margin-right: 25px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    flex-wrap: wrap;
+
+}
+.room1 {
+    width: 24%;
+}
+.room2 {
+    width: 24%;
+}
+.room3 {
+    width: 24%;
+}
+.room4 {
+    width: 24%;
+}
+.room5{
+    width: 24%;
+}
+.room6 {
+    width: 24%;
+}
+.room7 {
+    width: 24%;
+}
+.room8 {
+    width: 24%;
+}
