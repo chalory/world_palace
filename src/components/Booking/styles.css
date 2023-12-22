@@ -17,31 +17,44 @@
     margin-left: 25px;
     display: flex;
     flex-direction: row;
-    gap:10px;
+    gap:20px;
     flex-wrap: wrap;
+    justify-content: center;
 
 }
 .room1 {
-    width: 24%;
+    width: 20%;
 }
 .room2 {
-    width: 24%;
+    width: 20%;
 }
 .room3 {
-    width: 24%;
+    width: 20%;
 }
 .room4 {
-    width: 24%;
+    width: 20%;
 }
 .room5{
-    width: 24%;
+    width: 20%;
 }
 .room6 {
-    width: 24%;
+    width: 20%;
 }
 .room7 {
-    width: 24%;
+    width: 20%;
 }
 .room8 {
-    width: 24%;
+    width: 20%;
+}
+
+.floating-form {
+    width: 30%;
+    align-items: center;
+    margin-left: 35%
+}
+
+.submeet {
+    width: 20%;
+    align-content: center;
+    justify-items: center;
 }
