@@ -32,18 +32,25 @@ const Booking: React.FC = () => {
           <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
           <div style={{backgroundColor: 'beige', padding: '10px'}}>
             <form>
-              <label>
-                Name:
-                <input type="text" name="name" />
+            <label>Date:
+              <input type="date" name="date" />
               </label>
               <label>
-                Contact number:
-                <input type="text" name='phone' />
-              </label>
-              <label>
-                Email:
-                <input type="email" name="email" />
-              </label>
+                Time:
+                <input type="time" name="time" />
+                </label>
+                 <label>
+                  Name:
+                  <input type="text" name="reservationName" />
+                  </label>
+                  <label>
+                  Contact number:
+                  <input type="text" name='phone' />
+                  </label>
+                   <label>
+                   Number of pax:
+                  <input type="number" name='pax' min="1" />
+                  </label>
               <input className='submeet' type="submit" value="Submit"/>
             </form>
           </div>
