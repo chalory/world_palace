@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import './styles.css';
 
+
 const Booking: React.FC = () => {
   const [selectedRoom, setSelectedRoom] = useState<string | null>(null);
+  const [showForm, setShowForm] = useState<boolean>(true);
 
   const handleButtonClick = (room: string) => {
     setSelectedRoom(room);
+  };
+
+  const handleCloseForm = () => {
+    setShowForm(false);
   };
 
   return (
@@ -21,9 +27,10 @@ const Booking: React.FC = () => {
         <button className="room8" onClick={() => handleButtonClick('room8')}><img width="100%" src="https://via.placeholder.com/150" alt="8room" /></button>
         
       </div>
-      {selectedRoom && (
+      {selectedRoom && showForm && (
         <div className="floating-form" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, display: 'flex',}}>        
-        <div style={{backgroundColor: 'beige', padding: '10px'}}>
+          <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
+          <div style={{backgroundColor: 'beige', padding: '10px'}}>
             <form>
               <label>
                 Name:
