@@ -27,6 +27,11 @@ const Booking: React.FC = () => {
         <button className="room8" onClick={() => handleButtonClick('room8')}><img width="100%" src="https://via.placeholder.com/150" alt="8room" /></button>
         
       </div>
+
+<div className='Overlay' >
+
+</div>
+
       {selectedRoom && showForm && (
         <div className="floating-form" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, display: 'flex',}}>        
           <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
@@ -59,6 +64,7 @@ const Booking: React.FC = () => {
     </div>
   );
 };
+
        
 
 export default Booking;
