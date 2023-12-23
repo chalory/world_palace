@@ -14,6 +14,12 @@ const Booking: React.FC = () => {
     setShowForm(false);
   };
 
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    // ...existing submit logic...
+    setShowForm(false);
+  };
+
   return (
     <div>
       <div className="ktvrooms">
@@ -28,15 +34,12 @@ const Booking: React.FC = () => {
         
       </div>
 
-<div className='Overlay' >
-
-</div>
-
-      {selectedRoom && showForm && (
-        <div className="floating-form" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, display: 'flex',}}>        
-          <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
-          <div style={{backgroundColor: 'beige', padding: '10px'}}>
-            <form>
+      <div className={showForm ? 'Overlay' : ''}>
+        {selectedRoom && showForm && (
+          <div className="floating-form" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, display: 'flex',}}>        
+            <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
+            <div style={{backgroundColor: 'beige', padding: '10px'}}>
+            <form onSubmit={handleSubmit}>
             <label>Date:
               <input type="date" name="date" />
               </label>
@@ -57,14 +60,16 @@ const Booking: React.FC = () => {
                   <input type="number" name='pax' min="1" />
                   </label>
               <input className='submeet' type="submit" value="Submit"/>
+
             </form>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
-
        
 
 export default Booking;
+
