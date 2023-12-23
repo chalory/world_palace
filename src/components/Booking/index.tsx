@@ -4,7 +4,7 @@ import './styles.css';
 
 const Booking: React.FC = () => {
   const [selectedRoom, setSelectedRoom] = useState<string | null>(null);
-  const [showForm, setShowForm] = useState<boolean>(true);
+  const [showForm, setShowForm] = useState<boolean>(false);
 
   const handleButtonClick = (room: string) => {
     setSelectedRoom(room);
