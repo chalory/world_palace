@@ -8,8 +8,8 @@ const Booking: React.FC = () => {
 
   const handleButtonClick = (room: string) => {
     setSelectedRoom(room);
+    setShowForm(true); // Add this line
   };
-
   const handleCloseForm = () => {
     setShowForm(false);
   };
