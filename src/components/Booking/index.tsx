@@ -40,6 +40,7 @@ const Booking: React.FC = () => {
             <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
             <div style={{backgroundColor: 'beige', padding: '10px'}}>
             <form onSubmit={handleSubmit}>
+              <div className='input-block'></div>
             <label>Date:
               <input type="date" name="date" />
               </label>

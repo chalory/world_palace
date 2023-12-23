@@ -52,14 +52,27 @@
     align-items: center;
     margin-left: 35%;
     pointer-events: auto;
-    
+	min-width: 120px;
+	margin: 30px auto 10px;
+	font-size: 18px;
+	line-height: 40px;
+	border-radius: 25px;
+	border: none;
+	transition: all .3s ease-out;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
 }
 
 .submeet {
-    width: 20%;
-    align-content: center;
-    justify-items: center;
+    color: #fbfdff;
+	background: #a7e245;
+    border-radius: "15px";
+    width: 100%; /* Make the button fit the form */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    width: 80%; 
 }
 
 .Overlay {
@@ -71,4 +84,18 @@
     background-color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
 
+}
+
+.input-block {
+    display: block;
+	width: 100%;
+	margin-top: 8px;
+	padding-right: 15px;
+	padding-left: 15px;
+	font-size: 16px;
+	line-height: 40px;
+	color: #3b4465;
+  background: #eef9fe;
+  border: 1px solid #cddbef;
+  border-radius: 2px;
 }
