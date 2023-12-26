@@ -37,9 +37,10 @@ const Booking: React.FC = () => {
       <div className={showForm ? 'Overlay' : ''}>
         {selectedRoom && showForm && (
           <div className="floating-form" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, display: 'flex',}}>        
-            <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
             <div style={{backgroundColor: 'beige', padding: '10px'}}>
             <form onSubmit={handleSubmit}>
+            <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
+
               <div className='input-block'></div>
             <label>Date:
               <input type="date" name="date" />
@@ -60,6 +61,7 @@ const Booking: React.FC = () => {
                    Number of pax:
                   <input type="number" name='pax' min="1" />
                   </label>
+                  {/* <button className="close-btn">X</button> */}
               <input className='submeet' type="submit" value="Submit"/>
 
             </form>
