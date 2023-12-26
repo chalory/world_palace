@@ -5,13 +5,22 @@ import './styles.css';
 const Booking: React.FC = () => {
   const [selectedRoom, setSelectedRoom] = useState<string | null>(null);
   const [showForm, setShowForm] = useState<boolean>(false);
+  const [showNextPage, setShowNextPage] = useState<boolean>(false);
+
+  const handleNextClick = () => {
+    setShowNextPage(true);
+  };
 
   const handleButtonClick = (room: string) => {
     setSelectedRoom(room);
     setShowForm(true); // Add this line
+    setShowNextPage(false);
+
   };
   const handleCloseForm = () => {
     setShowForm(false);
+    setShowNextPage(false);
+
   };
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -43,13 +52,19 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         
       </div>
 
-      <div className={showForm ? 'Overlay' : ''}>
+      
+
+
+<div className={showForm ? 'Overlay' : ''}>
         {selectedRoom && showForm && (
           <div className="floating-form" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, display: 'flex',}}>        
             <div style={{backgroundColor: 'beige', padding: '10px'}}>
-              <form onSubmit={handleSubmit}>
-                <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
-              <div className='input-block'></div>
+              {!showNextPage ? (
+                <button onClick={handleNextClick}>Next</button>
+              ) : (
+                <form onSubmit={handleSubmit}>
+                  <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
+                  <div className='input-block'></div>
             <label>Date:
               <input type="date" name="date" />
               </label>
@@ -79,8 +94,9 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
                     <input type="text" />
                   </label>
                 )}
-                <input className='submeet' type="submit" value="Submit"/>
-              </form>
+                  <input className='submeet' type="submit" value="Submit"/>
+                </form>
+              )}
             </div>
           </div>
         )}
