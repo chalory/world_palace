@@ -20,6 +20,15 @@ const Booking: React.FC = () => {
     setShowForm(false);
   };
 
+const [isChecked, setIsChecked] = useState(false);
+
+const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  setIsChecked(event.target.checked);
+};
+
+
+  
+
   return (
     <div>
       <div className="ktvrooms">
@@ -38,9 +47,8 @@ const Booking: React.FC = () => {
         {selectedRoom && showForm && (
           <div className="floating-form" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, display: 'flex',}}>        
             <div style={{backgroundColor: 'beige', padding: '10px'}}>
-            <form onSubmit={handleSubmit}>
-            <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
-
+              <form onSubmit={handleSubmit}>
+                <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
               <div className='input-block'></div>
             <label>Date:
               <input type="date" name="date" />
@@ -61,10 +69,18 @@ const Booking: React.FC = () => {
                    Number of pax:
                   <input type="number" name='pax' min="1" />
                   </label>
-                  {/* <button className="close-btn">X</button> */}
-              <input className='submeet' type="submit" value="Submit"/>
-
-            </form>
+                  <label>
+                  Order In Advance
+                  <input type="checkbox" onChange={handleCheckboxChange} />
+                </label>
+                {isChecked && (
+                  <label>
+                    Additional text box:
+                    <input type="text" />
+                  </label>
+                )}
+                <input className='submeet' type="submit" value="Submit"/>
+              </form>
             </div>
           </div>
         )}
@@ -72,7 +88,5 @@ const Booking: React.FC = () => {
     </div>
   );
 };
-       
 
 export default Booking;
-

@@ -68,6 +68,8 @@
     display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 800px; /* Increase this to make the form wider */
+
 }
   
   
@@ -112,4 +114,10 @@
     font-size: 20px;
     cursor: pointer;
     position: relative;
+  }
+
+
+  form {
+    margin: auto auto auto 0; /* Change this to align the form to the left */
+
   }
