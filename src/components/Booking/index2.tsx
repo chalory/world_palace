@@ -22,7 +22,7 @@ const Slideshow: React.FC<SlideshowProps> = ({ images }) => {
       <img
         src={images[currentIndex]}
         alt={`Slideshow Image ${currentIndex + 1}`}
-        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        style={{ width: "50%", height: "50%" }}
       />
     </div>
   );
