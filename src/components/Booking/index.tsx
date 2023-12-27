@@ -1,5 +1,7 @@
 import React, { useState, useRef, } from 'react';
 import './styles.css';
+import Slideshow from "./index2";
+
 
 
 const Booking: React.FC = () => {
@@ -35,22 +37,23 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   setIsChecked(event.target.checked);
 };
 
-const picroom1 = ['/svg/graphs.jpg', '/svg/github.svg', 
-'/svg/developer2.png', '/svg/developer3.png' 
-]
+const images = ["https://ateressi.sirv.com/IMG_20230421_173711.jpg", "https://ateressi.sirv.com/IMG_20230421_174539.jpg", "https://ateressi.sirv.com/DSC_0775.jpg"];
+
+
 var i = 0;
 function imageslide() {
-      document.getElementById("slyde").src = picroom1[i]
-    
+  const slydeElement = document.getElementById("slyde") as HTMLImageElement | null;
+  
+  if (slydeElement) {
+    slydeElement.src = picroom1[i];
+  
     if(i < picroom1.length -1) {
-        i++;
+      i++;
     } else {
-        i = 0;
+      i = 0;
     }
-    setTimeout(imageslide, 2500);
-   };
-window.onload = imageslide;
-
+  }
+}
 
   
 
@@ -73,8 +76,10 @@ window.onload = imageslide;
           <div className="floating-form" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, display: 'flex',}}>        
             <div style={{backgroundColor: 'beige', padding: '10px'}}>
               {!showNextPage ? (<div className='showit'>
-                <script src='/slideshow.js'></script>
-                <img id='slyde' src="/img/svg/developer.png" alt="" />
+                {/* <script src='/slideshow.js'></script> */}
+                {/* <img id='slyde' src="/img/svg/developer.png" alt="" /> */}
+                <Slideshow images={images} />
+
                 <button className='nxtbtn' onClick={handleNextClick}>Next</button>
                 </div> ) : (
                 <form onSubmit={handleSubmit}>
