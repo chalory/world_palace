@@ -13,6 +13,7 @@
 } */
 
 .ktvrooms {
+    margin-bottom: 50px;
     margin-right: 25px;
     margin-left: 25px;
     display: flex;
@@ -24,27 +25,35 @@
 }
 .room1 {
     width: 20%;
+    border: none;
 }
 .room2 {
     width: 20%;
+    border: none;
 }
 .room3 {
     width: 20%;
+    border: none;
 }
 .room4 {
     width: 20%;
+    border: none;
 }
 .room5{
     width: 20%;
+    border: none;
 }
 .room6 {
     width: 20%;
+    border: none;
 }
 .room7 {
     width: 20%;
+    border: none;
 }
 .room8 {
     width: 20%;
+    border: none;
 }
 
 /* .Overlay {
@@ -57,6 +66,32 @@
     pointer-events: none;
 
 } */
+.showit{
+  display: flex;
+  flex-direction: column;
+}
+.pic1 {
+}
+.pic2 {
+
+}
+.pic3 {
+
+}
+.pic4 {
+
+}
+.pic5 {
+
+}
+.pic6 {
+
+}
+.nxtbtn {
+  position: absolute;
+}
+
+
 
 .floating-form {
     background-color: whitesmoke;
@@ -115,7 +150,9 @@
     cursor: pointer;
     position: relative;
   }
-
+.slyde {
+  size: 20%;
+}
 
   form {
     margin: auto auto auto 0; /* Change this to align the form to the left */
