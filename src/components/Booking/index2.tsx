@@ -18,8 +18,7 @@ const Slideshow: React.FC<SlideshowProps> = ({ images }) => {
   }, [currentIndex, images.length]);
 
   return (
-    <div style={{ width: "100%", height: "100%", borderRadius: "15px", overflow: "hidden" }}>
-      <img
+<div style={{ width: "100%", height: "100%", borderRadius: "15px", overflow: "hidden",backgroundColor: "white" }}>      <img
         src={images[currentIndex]}
         alt={`Slideshow Image ${currentIndex + 1}`}
         style={{ width: "50%", height: "50%" }}
