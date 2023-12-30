@@ -13,12 +13,12 @@ const Booking: React.FC = () => {
     setShowNextPage(true);
   };
 
-  const handleButtonClick = (room: string) => {
-    setSelectedRoom(room);
-    setShowForm(true); // Add this line
-    setShowNextPage(false);
+  // const handleButtonClick = (room: string) => {
+  //   setSelectedRoom(room);
+  //   setShowForm(true); // Add this line
+  //   setShowNextPage(false);
 
-  };
+  // };
   const handleCloseForm = () => {
     setShowForm(false);
     setShowNextPage(false);
@@ -39,6 +39,22 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 
 const images = ["https://ateressi.sirv.com/IMG_20230421_173711.jpg", "https://ateressi.sirv.com/IMG_20230421_174539.jpg", "https://ateressi.sirv.com/DSC_0775.jpg"];
 
+const roomImages: { [key: string]: string[] } = {
+
+  'room1': ["https://ateressi.sirv.com/IMG_20230421_173711.jpg", "https://via.placeholder.com/250"],
+  
+  'room2': ["https://ateressi.sirv.com/IMG_20230421_174539.jpg", "https://ateressi.sirv.com/DSC_0775.jpg"],
+  // Add more rooms as needed
+};
+
+const [currentImages, setCurrentImages] = useState<string[]>([]);
+
+const handleButtonClick = (room: string) => {
+  setCurrentImages(roomImages[room]);
+  setSelectedRoom(room);
+  setShowForm(true); // Add this line
+  setShowNextPage(false);
+};
 
 
   
@@ -62,7 +78,7 @@ const images = ["https://ateressi.sirv.com/IMG_20230421_173711.jpg", "https://at
           <div className="floating-form" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, display: 'flex',}}>        
             <div style={{backgroundColor: 'beige', padding: '10px'}}>
               {!showNextPage ? (<div className='showit'>
-                <Slideshow images={images}/>
+              <Slideshow images={currentImages} />
                 <button className='nxtbtn' onClick={handleNextClick}>Next</button>
                 <p>hello this is room etcetccetc</p> </div> ) : (
                 <form onSubmit={handleSubmit}>
