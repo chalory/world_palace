@@ -12,7 +12,7 @@ const Slideshow: React.FC<SlideshowProps> = ({ images }) => {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Change the interval as per your requirement
+    }, 1000); // Change the interval as per your requirement
 
     return () => clearInterval(interval);
   }, [currentIndex, images.length]);
@@ -21,7 +21,7 @@ const Slideshow: React.FC<SlideshowProps> = ({ images }) => {
 <div style={{ width: "100%", height: "100%", borderRadius: "15px", overflow: "hidden",backgroundColor: "white" }}>      <img
         src={images[currentIndex]}
         alt={`Slideshow Image ${currentIndex + 1}`}
-        style={{ width: "50%", height: "50%" }}
+        style={{ width: "100%", height: "100%" }}
       />
     </div>
   );

@@ -40,20 +40,6 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 const images = ["https://ateressi.sirv.com/IMG_20230421_173711.jpg", "https://ateressi.sirv.com/IMG_20230421_174539.jpg", "https://ateressi.sirv.com/DSC_0775.jpg"];
 
 
-var i = 0;
-function imageslide() {
-  const slydeElement = document.getElementById("slyde") as HTMLImageElement | null;
-  
-  if (slydeElement) {
-    slydeElement.src = picroom1[i];
-  
-    if(i < picroom1.length -1) {
-      i++;
-    } else {
-      i = 0;
-    }
-  }
-}
 
   
 
@@ -76,12 +62,9 @@ function imageslide() {
           <div className="floating-form" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, display: 'flex',}}>        
             <div style={{backgroundColor: 'beige', padding: '10px'}}>
               {!showNextPage ? (<div className='showit'>
-                {/* <script src='/slideshow.js'></script> */}
-                {/* <img id='slyde' src="/img/svg/developer.png" alt="" /> */}
-                <Slideshow images={images} />
-
+                <Slideshow images={images}/>
                 <button className='nxtbtn' onClick={handleNextClick}>Next</button>
-                </div> ) : (
+                <p>hello this is room etcetccetc</p> </div> ) : (
                 <form onSubmit={handleSubmit}>
                   <button onClick={handleCloseForm} style={{position: 'absolute', right: 0}}>X</button>
                   <div className='input-block'></div>
