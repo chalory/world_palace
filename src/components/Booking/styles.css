@@ -13,6 +13,7 @@
 } */
 
 .ktvrooms {
+   flex-wrap: wrap;
     margin-bottom: 50px;
     margin-right: 25px;
     margin-left: 25px;
@@ -21,37 +22,44 @@
     gap:20px;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 .room1 {
+    min-width: 250px;
     width: 20%;
     border: none;
 }
 .room2 {
+    min-width: 250px;
     width: 20%;
     border: none;
 }
 .room3 {
+    min-width: 250px;
     width: 20%;
     border: none;
 }
 .room4 {
+  min-width: 250px;
     width: 20%;
     border: none;
 }
 .room5{
+  min-width: 250px;
     width: 20%;
     border: none;
 }
 .room6 {
+    min-width: 250px;
     width: 20%;
     border: none;
 }
 .room7 {
+    min-width: 250px;
     width: 20%;
     border: none;
 }
 .room8 {
+    min-width: 250px;
     width: 20%;
     border: none;
 }
@@ -67,11 +75,11 @@
 
 } */
 .showit{
+
   display: flex;
-  height: 100%px;
+  max-height: 100%;
   width: 100%;
   flex-direction: column;
-  
 }
 .pic1 {
 }
@@ -97,24 +105,29 @@
 
 
 .floating-form {
-    background-color: whitesmoke;
+    background-color: beige;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0px 0px 20px rgb(0, 0, 0);
     margin: auto;
     display: flex;
-  justify-content: center;
-  max-width: 50%; /* Increase this to make the form wider */
-  height: 80%;
+    justify-content: center;
+    max-width: 50%;
+    width: 400px;
+    min-width: 80%; 
+    height: 80%;
+    overflow: hidden;
 
 }
   
   
   .floating-form label {
+    
     display: block;
     margin-bottom: 10px;
   }
   .form {
+    
     /* ...existing styles... */
     width: 80%; /* Adjust this value to change the width of the form */
     max-width: 500px; /* Adjust this value to set a maximum width for the form */
@@ -159,4 +172,8 @@
   form {
     margin: auto auto auto 0; /* Change this to align the form to the left */
 
+  }
+  .nxtbtn {
+    right: 0;
+    bottom: 0;
   }

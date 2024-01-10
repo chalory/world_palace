@@ -44,6 +44,7 @@ const roomImages: { [key: string]: string[] } = {
   'room1': ["https://ateressi.sirv.com/IMG_20230421_173711.jpg", "https://via.placeholder.com/250"],
   
   'room2': ["https://ateressi.sirv.com/IMG_20230421_174539.jpg", "https://ateressi.sirv.com/DSC_0775.jpg"],
+  
   // Add more rooms as needed
 };
 
